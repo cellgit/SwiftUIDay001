@@ -23,6 +23,10 @@
 		8459DF782C5375E7001BFE6E /* ViewBuilderDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459DF772C5375E7001BFE6E /* ViewBuilderDemo.swift */; };
 		8459DF7E2C537940001BFE6E /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459DF7D2C537940001BFE6E /* Chapter1.swift */; };
 		8459DF802C538407001BFE6E /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459DF7F2C538407001BFE6E /* Chapter2.swift */; };
+		84D4DC942C5CE38A00D85782 /* SettingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4DC932C5CE38A00D85782 /* SettingsDetailView.swift */; };
+		84D4DC962C5CE3AA00D85782 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4DC952C5CE3AA00D85782 /* SettingsView.swift */; };
+		84D4DC992C5CE42B00D85782 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4DC982C5CE42B00D85782 /* Journal.swift */; };
+		84D4DC9B2C5CE44200D85782 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4DC9A2C5CE44200D85782 /* JournalEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		8459DF772C5375E7001BFE6E /* ViewBuilderDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderDemo.swift; sourceTree = "<group>"; };
 		8459DF7D2C537940001BFE6E /* Chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
 		8459DF7F2C538407001BFE6E /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
+		84D4DC932C5CE38A00D85782 /* SettingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailView.swift; sourceTree = "<group>"; };
+		84D4DC952C5CE3AA00D85782 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		84D4DC982C5CE42B00D85782 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		84D4DC9A2C5CE44200D85782 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +191,37 @@
 			isa = PBXGroup;
 			children = (
 				8459DF7D2C537940001BFE6E /* Chapter1.swift */,
-				8459DF7F2C538407001BFE6E /* Chapter2.swift */,
+				84D4DC912C5CE33E00D85782 /* Chapter2 */,
 			);
 			path = Step1;
+			sourceTree = "<group>";
+		};
+		84D4DC912C5CE33E00D85782 /* Chapter2 */ = {
+			isa = PBXGroup;
+			children = (
+				8459DF7F2C538407001BFE6E /* Chapter2.swift */,
+				84D4DC972C5CE41900D85782 /* Models */,
+				84D4DC922C5CE35000D85782 /* Views */,
+			);
+			path = Chapter2;
+			sourceTree = "<group>";
+		};
+		84D4DC922C5CE35000D85782 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84D4DC952C5CE3AA00D85782 /* SettingsView.swift */,
+				84D4DC932C5CE38A00D85782 /* SettingsDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84D4DC972C5CE41900D85782 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84D4DC982C5CE42B00D85782 /* Journal.swift */,
+				84D4DC9A2C5CE44200D85782 /* JournalEntry.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,12 +359,16 @@
 				8459DF752C5370E6001BFE6E /* CustomList.swift in Sources */,
 				8459DF802C538407001BFE6E /* Chapter2.swift in Sources */,
 				8459DF782C5375E7001BFE6E /* ViewBuilderDemo.swift in Sources */,
+				84D4DC992C5CE42B00D85782 /* Journal.swift in Sources */,
 				8459DF382C5342F8001BFE6E /* Item.swift in Sources */,
 				8459DF342C5342F8001BFE6E /* Day001App.swift in Sources */,
 				8459DF732C536FD7001BFE6E /* CustomListItem.swift in Sources */,
 				8459DF7E2C537940001BFE6E /* Chapter1.swift in Sources */,
 				8459DF712C536CEC001BFE6E /* LearningViewBuilder.swift in Sources */,
+				84D4DC942C5CE38A00D85782 /* SettingsDetailView.swift in Sources */,
+				84D4DC9B2C5CE44200D85782 /* JournalEntry.swift in Sources */,
 				8459DF6E2C536754001BFE6E /* VerticalScrollView.swift in Sources */,
+				84D4DC962C5CE3AA00D85782 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

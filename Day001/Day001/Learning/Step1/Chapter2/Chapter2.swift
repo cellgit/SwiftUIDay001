@@ -67,6 +67,7 @@ import SwiftUI
 @main
 struct Section2: App {
     var body: some Scene {
+        #if os(iOS)
         WindowGroup {
             TabView {
                 ContentView()
@@ -79,6 +80,16 @@ struct Section2: App {
                     }
             }
         }
+        #elseif os(macOS)
+        WindowGroup {
+            ContentView()
+        }
+        
+        Settings {
+            ViewBuilderDemo()
+        }
+        #endif
+        
     }
 }
 
