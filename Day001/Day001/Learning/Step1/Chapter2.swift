@@ -106,9 +106,6 @@ struct TabItemModifier<V: View>: ViewModifier {
 
 extension View {
     public func tabItem2<V>(@ViewBuilder _ label: () -> V) -> some View where V: View {
-        
-        ViewModifier
-        
         self.modifier(TabItemModifier(label: label()))
     }
 }
