@@ -43,8 +43,16 @@
 import SwiftUI
 
 struct ScalingViewsToComplementText: View {
+    
+    let keywords = ["chives", "fern-leaf lavender"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ForEach(keywords, id: \.self) { word in
+                KeywordBubbleDefaultPadding(keyword: word, symbol: "leaf")
+            }
+        }
+        .padding()
     }
 }
 
