@@ -28,6 +28,7 @@
 		8459DF802C538407001BFE6E /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459DF7F2C538407001BFE6E /* Chapter2.swift */; };
 		84C9E8932C63396F00A2B790 /* CaptionedPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9E8922C63396F00A2B790 /* CaptionedPhoto.swift */; };
 		84C9E8952C63397E00A2B790 /* Caption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9E8942C63397E00A2B790 /* Caption.swift */; };
+		84C9E8982C633E8A00A2B790 /* TrainCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C9E8972C633E8A00A2B790 /* TrainCars.swift */; };
 		84D4DC942C5CE38A00D85782 /* SettingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4DC932C5CE38A00D85782 /* SettingsDetailView.swift */; };
 		84D4DC962C5CE3AA00D85782 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4DC952C5CE3AA00D85782 /* SettingsView.swift */; };
 		84D4DC992C5CE42B00D85782 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4DC982C5CE42B00D85782 /* Journal.swift */; };
@@ -77,6 +78,7 @@
 		8459DF7F2C538407001BFE6E /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		84C9E8922C63396F00A2B790 /* CaptionedPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionedPhoto.swift; sourceTree = "<group>"; };
 		84C9E8942C63397E00A2B790 /* Caption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caption.swift; sourceTree = "<group>"; };
+		84C9E8972C633E8A00A2B790 /* TrainCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainCars.swift; sourceTree = "<group>"; };
 		84D4DC932C5CE38A00D85782 /* SettingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailView.swift; sourceTree = "<group>"; };
 		84D4DC952C5CE3AA00D85782 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		84D4DC982C5CE42B00D85782 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		8459DF792C5377F2001BFE6E /* Step1 */ = {
 			isa = PBXGroup;
 			children = (
+				84C9E8962C633E6A00A2B790 /* Chapter6 */,
 				8459DF7D2C537940001BFE6E /* Chapter1.swift */,
 				84D4DC912C5CE33E00D85782 /* Chapter2 */,
 				842E09702C60C6E600C7D8AB /* Chapter3 */,
@@ -233,6 +236,14 @@
 				84C9E8942C63397E00A2B790 /* Caption.swift */,
 			);
 			path = Chapter5;
+			sourceTree = "<group>";
+		};
+		84C9E8962C633E6A00A2B790 /* Chapter6 */ = {
+			isa = PBXGroup;
+			children = (
+				84C9E8972C633E8A00A2B790 /* TrainCars.swift */,
+			);
+			path = Chapter6;
 			sourceTree = "<group>";
 		};
 		84D4DC912C5CE33E00D85782 /* Chapter2 */ = {
@@ -412,6 +423,7 @@
 				8459DF6E2C536754001BFE6E /* VerticalScrollView.swift in Sources */,
 				842E09772C60D47400C7D8AB /* ScalingViewsToComplementText.swift in Sources */,
 				84C9E8932C63396F00A2B790 /* CaptionedPhoto.swift in Sources */,
+				84C9E8982C633E8A00A2B790 /* TrainCars.swift in Sources */,
 				84D4DC962C5CE3AA00D85782 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
