@@ -17,17 +17,17 @@ final class MockChatData {
     let tim = MockUser(
         uid: "1",
         name: "Tim",
-        avatar: AssetExtractor.createLocalUrl(forImageNamed: "tim")!
+        avatar: AssetExtractor.createLocalUrl(forImageNamed: "Flowers_2_Pink_Peony")!
     )
     let steve = MockUser(
         uid: "2",
         name: "Steve",
-        avatar: AssetExtractor.createLocalUrl(forImageNamed: "steve")!
+        avatar: AssetExtractor.createLocalUrl(forImageNamed: "Flowers_2_Pink_Peony")!
     )
     let bob = MockUser(
         uid: "3",
         name: "Bob",
-        avatar: AssetExtractor.createLocalUrl(forImageNamed: "bob")!
+        avatar: AssetExtractor.createLocalUrl(forImageNamed: "Flowers_2_Pink_Peony")!
     )
 
     func randomMessage(senders: [MockUser] = [], date: Date? = nil) -> MockMessage {
