@@ -7,17 +7,29 @@
 
 import SwiftUI
 
-// 子模块路由目标
+/// 子模块的路由
 enum SubModuleRoute: RouteProtocol {
+    case settings
+    case profile(userID: String)
+
+    // 遵循 Identifiable
     var id: String {
         switch self {
         case .settings:
-            return "settings"
-        case .profile(let userID):
-            return "profile_\(userID)"
+            return "sub_settings"
+        case let .profile(userID):
+            return "sub_profile_\(userID)"
         }
     }
-    
-    case settings
-    case profile(userID: String)
+}
+
+extension SubModuleRoute {
+    func destinationView() -> AnyView {
+        switch self {
+        case .settings:
+            return AnyView(SettingsView())
+        case let .profile(userID):
+            return AnyView(ProfileView(userID: userID))
+        }
+    }
 }

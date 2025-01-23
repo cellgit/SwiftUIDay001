@@ -18,6 +18,10 @@
 		846B48452D41F822001ADB1A /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B48442D41F822001ADB1A /* URL+extension.swift */; };
 		846B48472D41F83F001ADB1A /* MainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B48462D41F83F001ADB1A /* MainRoute.swift */; };
 		846B48492D41F85E001ADB1A /* SubModuleRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B48482D41F85E001ADB1A /* SubModuleRoute.swift */; };
+		846B484B2D420F1C001ADB1A /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B484A2D420F1C001ADB1A /* AppRoute.swift */; };
+		846B484D2D420F47001ADB1A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B484C2D420F47001ADB1A /* AppRouter.swift */; };
+		846B484F2D420FAE001ADB1A /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B484E2D420FAE001ADB1A /* Views.swift */; };
+		846B48512D420FDA001ADB1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B48502D420FDA001ADB1A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		846B48442D41F822001ADB1A /* URL+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+extension.swift"; sourceTree = "<group>"; };
 		846B48462D41F83F001ADB1A /* MainRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoute.swift; sourceTree = "<group>"; };
 		846B48482D41F85E001ADB1A /* SubModuleRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubModuleRoute.swift; sourceTree = "<group>"; };
+		846B484A2D420F1C001ADB1A /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		846B484C2D420F47001ADB1A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		846B484E2D420FAE001ADB1A /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		846B48502D420FDA001ADB1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				846B48142D41F3E2001ADB1A /* Day002App.swift */,
+				846B48502D420FDA001ADB1A /* ContentView.swift */,
 				846B48422D41F52C001ADB1A /* MainView.swift */,
+				846B484E2D420FAE001ADB1A /* Views.swift */,
 				846B483F2D41F449001ADB1A /* router */,
 				846B48182D41F3E3001ADB1A /* Assets.xcassets */,
 				846B481A2D41F3E3001ADB1A /* Day002.entitlements */,
@@ -143,6 +153,8 @@
 			children = (
 				846B48402D41F46D001ADB1A /* RouteProtocol.swift */,
 				846B48442D41F822001ADB1A /* URL+extension.swift */,
+				846B484C2D420F47001ADB1A /* AppRouter.swift */,
+				846B484A2D420F1C001ADB1A /* AppRoute.swift */,
 				846B48462D41F83F001ADB1A /* MainRoute.swift */,
 				846B48482D41F85E001ADB1A /* SubModuleRoute.swift */,
 			);
@@ -283,8 +295,12 @@
 				846B48432D41F52C001ADB1A /* MainView.swift in Sources */,
 				846B48412D41F46D001ADB1A /* RouteProtocol.swift in Sources */,
 				846B48152D41F3E2001ADB1A /* Day002App.swift in Sources */,
+				846B484D2D420F47001ADB1A /* AppRouter.swift in Sources */,
 				846B48472D41F83F001ADB1A /* MainRoute.swift in Sources */,
+				846B48512D420FDA001ADB1A /* ContentView.swift in Sources */,
+				846B484B2D420F1C001ADB1A /* AppRoute.swift in Sources */,
 				846B48452D41F822001ADB1A /* URL+extension.swift in Sources */,
+				846B484F2D420FAE001ADB1A /* Views.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

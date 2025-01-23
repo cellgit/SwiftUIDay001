@@ -7,46 +7,30 @@
 
 import SwiftUI
 
-// 主模块路由目标
+/// 主模块的路由
 enum MainRoute: RouteProtocol {
+    case home
+    case detail(message: String)
+
     var id: String {
         switch self {
         case .home:
-            return "home"
-        case .detail(let message):
-            return "detail_\(message)"
+            return "main_home"
+        case let .detail(msg):
+            return "main_detail_\(msg)"
         }
     }
-    
-    case home
-    case detail(message: String)
 }
 
-class MainRouter: RouterProtocol {
-    typealias RouteType = MainRoute
-    
-    @Published var navigationPath: [MainRoute] = []
-    @Published var presentedRoute: MainRoute? = nil
-    
-    func push(_ route: MainRoute) {
-        navigationPath.append(route)
-    }
-    
-    func pop() {
-        _ = navigationPath.popLast()
-    }
-    
-    func present(_ route: MainRoute) {
-        presentedRoute = route
-    }
-    
-    func dismiss() {
-        presentedRoute = nil
-    }
-    
-    func handleDeepLink(_ url: URL) {
-        if url.pathComponents.contains("detail"), let message = url.queryParameters["message"] {
-            push(.detail(message: message))
+
+// 路由到视图的映射扩展
+extension MainRoute {
+    func destinationView() -> AnyView {
+        switch self {
+        case .home:
+            return AnyView(HomeView())
+        case let .detail(msg):
+            return AnyView(DetailView(message: msg))
         }
     }
 }

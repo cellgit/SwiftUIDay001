@@ -8,10 +8,14 @@
 import SwiftUI
 
 extension URL {
+    // URL扩展，用于处理查询参数
     var queryParameters: [String: String] {
         var params = [String: String]()
-        URLComponents(url: self, resolvingAgainstBaseURL: true)?.queryItems?.forEach {
-            params[$0.name] = $0.value
+        if let components = URLComponents(url: self, resolvingAgainstBaseURL: true),
+           let queryItems = components.queryItems {
+            for item in queryItems {
+                params[item.name] = item.value
+            }
         }
         return params
     }

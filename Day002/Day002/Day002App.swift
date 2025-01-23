@@ -10,25 +10,18 @@ import SwiftUI
 @main
 struct Day002App: App {
     
-    @StateObject private var router = MainRouter()
+    @StateObject private var router = AppRouter()
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: $router.navigationPath) {
-                MainView()
-                    .environmentObject(router)
-                    .sheet(item: $router.presentedRoute) { route in
-                        switch route {
-                        case .home:
-                            EmptyView()
-                        case .detail(let message):
-                            DetailView(message: message)
-                        }
-                    }
-            }
-            .onOpenURL { url in
-                router.handleDeepLink(url)
-            }
+            // 你的入口视图
+            ContentView()
+            // 如果在内部想通过 .environmentObject 获取 router，可以写这一行
+                .environmentObject(router)
         }
+//        // 监听外部深链
+//        .onOpenURL { url in
+//            router.handleDeepLink(url)
+//        }
     }
 }
