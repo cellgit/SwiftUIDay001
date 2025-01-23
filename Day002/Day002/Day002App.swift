@@ -19,6 +19,7 @@ struct Day002App: App {
             // 如果在内部想通过 .environmentObject 获取 router，可以写这一行
                 .environmentObject(router)
         }
+        
 //        // 监听外部深链
 //        .onOpenURL { url in
 //            router.handleDeepLink(url)

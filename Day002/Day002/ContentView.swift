@@ -34,6 +34,10 @@ struct ContentView: View {
                     // 也用同一个方法构造
                     router.destinationView(for: route)
                 }
+                
+        }
+        .onOpenURL { url in
+            router.handleDeepLink(url)
         }
     }
 }

@@ -7,10 +7,31 @@
 
 import SwiftUI
 
+/**
+ 
+ 如何处理深度链接:
+ 1. 在info.plist添加URL Types，设置URL Schemes
+ 2. 在首页视图添加onOpenURL中处理深链接,如下:
+ NavigationStack(path: $router.navigationPath) {
+     
+ }
+ .onOpenURL { url in
+     router.handleDeepLink(url)
+ }
+ 
+ 
+ 深度链接如:
+ myapp://detail?message=HelloWorld — 展示一个详情页
+ myapp://profile?userID=12345
+ myapp://settings — 展示设置页面
+ 
+ 
+ */
+
+
 // 应用路由的实现
 class AppRouter: RouterProtocol {
     typealias RouteType = AppRoute
-//    typealias AssociatedView = View  // 使用 `some View` 而非 `AnyView`
     
     @Published var navigationPath: [AppRoute] = []
     @Published var presentedRoute: AppRoute? = nil
@@ -34,17 +55,27 @@ class AppRouter: RouterProtocol {
     
     // 深链处理
     func handleDeepLink(_ url: URL) {
+        // 修正路径部分的解析，避免 pathComponents 为空
+        guard let routerPath = url.routerPath, !routerPath.isEmpty else {
+            print("Invalid deep link URL: \(url)")
+            return
+        }
+        print("routerPath: \(routerPath)")  // 打印路径部分
         let params = url.queryParameters
-        
-        // 根据URL路径处理不同的路由
-        if url.pathComponents.contains("detail"),
-           let msg = params["message"] {
-            push(.main(.detail(message: msg)))
-        } else if url.pathComponents.contains("profile"),
-                  let userID = params["userID"] {
-            push(.sub(.profile(userID: userID)))
-        } else if url.pathComponents.contains("settings") {
+        debugPrint("params====: \(params)")
+        switch routerPath {
+        case "detail":
+            if let msg = params["message"] {
+                push(.main(.detail(message: msg)))
+            }
+        case "profile":
+            if let userID = params["userID"] {
+                push(.sub(.profile(userID: userID)))
+            }
+        case "settings":
             push(.sub(.settings))
+        default:
+            print("Unhandled deep link: \(routerPath)")
         }
     }
     
