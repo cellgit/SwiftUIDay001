@@ -21,6 +21,15 @@
 		846B484D2D420F47001ADB1A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B484C2D420F47001ADB1A /* AppRouter.swift */; };
 		846B484F2D420FAE001ADB1A /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B484E2D420FAE001ADB1A /* Views.swift */; };
 		846B48512D420FDA001ADB1A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B48502D420FDA001ADB1A /* HomeView.swift */; };
+		84DD83C32D4333D800C614D0 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83C22D4333D800C614D0 /* EventBus.swift */; };
+		84DD83C52D43359C00C614D0 /* EventSubscribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83C42D43359C00C614D0 /* EventSubscribing.swift */; };
+		84DD83C92D43368A00C614D0 /* ModuleA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83C82D43368A00C614D0 /* ModuleA.swift */; };
+		84DD83CB2D4336DA00C614D0 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83CA2D4336DA00C614D0 /* UserProfile.swift */; };
+		84DD83CD2D4336EB00C614D0 /* ModuleB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83CC2D4336EB00C614D0 /* ModuleB.swift */; };
+		84DD83CF2D43370100C614D0 /* ModuleC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83CE2D43370100C614D0 /* ModuleC.swift */; };
+		84DD83D12D43374A00C614D0 /* EventExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83D02D43374A00C614D0 /* EventExample.swift */; };
+		84DD83D32D43378900C614D0 /* ModuleD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83D22D43378900C614D0 /* ModuleD.swift */; };
+		84DD83D52D433F8300C614D0 /* RouteCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD83D42D433F8300C614D0 /* RouteCallbacks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +69,15 @@
 		846B484E2D420FAE001ADB1A /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		846B48502D420FDA001ADB1A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		846B48522D422C34001ADB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		84DD83C22D4333D800C614D0 /* EventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
+		84DD83C42D43359C00C614D0 /* EventSubscribing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSubscribing.swift; sourceTree = "<group>"; };
+		84DD83C82D43368A00C614D0 /* ModuleA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleA.swift; sourceTree = "<group>"; };
+		84DD83CA2D4336DA00C614D0 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		84DD83CC2D4336EB00C614D0 /* ModuleB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleB.swift; sourceTree = "<group>"; };
+		84DD83CE2D43370100C614D0 /* ModuleC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleC.swift; sourceTree = "<group>"; };
+		84DD83D02D43374A00C614D0 /* EventExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventExample.swift; sourceTree = "<group>"; };
+		84DD83D22D43378900C614D0 /* ModuleD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleD.swift; sourceTree = "<group>"; };
+		84DD83D42D433F8300C614D0 /* RouteCallbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCallbacks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +133,8 @@
 				846B48502D420FDA001ADB1A /* HomeView.swift */,
 				846B484E2D420FAE001ADB1A /* Views.swift */,
 				84DD83C12D43260700C614D0 /* RouterModule */,
+				84DD83C72D4335E000C614D0 /* EventBusExample */,
+				84DD83C62D4335A000C614D0 /* EventManager */,
 				846B483F2D41F449001ADB1A /* router */,
 				846B48182D41F3E3001ADB1A /* Assets.xcassets */,
 				846B481A2D41F3E3001ADB1A /* Day002.entitlements */,
@@ -155,6 +175,7 @@
 				846B48442D41F822001ADB1A /* URL+extension.swift */,
 				846B484C2D420F47001ADB1A /* AppRouter.swift */,
 				846B484A2D420F1C001ADB1A /* AppRoute.swift */,
+				84DD83D42D433F8300C614D0 /* RouteCallbacks.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -166,6 +187,28 @@
 				846B48482D41F85E001ADB1A /* SubModuleRoute.swift */,
 			);
 			path = RouterModule;
+			sourceTree = "<group>";
+		};
+		84DD83C62D4335A000C614D0 /* EventManager */ = {
+			isa = PBXGroup;
+			children = (
+				84DD83C22D4333D800C614D0 /* EventBus.swift */,
+				84DD83C42D43359C00C614D0 /* EventSubscribing.swift */,
+			);
+			path = EventManager;
+			sourceTree = "<group>";
+		};
+		84DD83C72D4335E000C614D0 /* EventBusExample */ = {
+			isa = PBXGroup;
+			children = (
+				84DD83D02D43374A00C614D0 /* EventExample.swift */,
+				84DD83C82D43368A00C614D0 /* ModuleA.swift */,
+				84DD83CC2D4336EB00C614D0 /* ModuleB.swift */,
+				84DD83CE2D43370100C614D0 /* ModuleC.swift */,
+				84DD83D22D43378900C614D0 /* ModuleD.swift */,
+				84DD83CA2D4336DA00C614D0 /* UserProfile.swift */,
+			);
+			path = EventBusExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,14 +342,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B48492D41F85E001ADB1A /* SubModuleRoute.swift in Sources */,
+				84DD83CF2D43370100C614D0 /* ModuleC.swift in Sources */,
+				84DD83C32D4333D800C614D0 /* EventBus.swift in Sources */,
+				84DD83D32D43378900C614D0 /* ModuleD.swift in Sources */,
 				846B48412D41F46D001ADB1A /* RouteProtocol.swift in Sources */,
+				84DD83C52D43359C00C614D0 /* EventSubscribing.swift in Sources */,
+				84DD83CD2D4336EB00C614D0 /* ModuleB.swift in Sources */,
 				846B48152D41F3E2001ADB1A /* Day002App.swift in Sources */,
 				846B484D2D420F47001ADB1A /* AppRouter.swift in Sources */,
 				846B48472D41F83F001ADB1A /* MainRoute.swift in Sources */,
+				84DD83C92D43368A00C614D0 /* ModuleA.swift in Sources */,
 				846B48512D420FDA001ADB1A /* HomeView.swift in Sources */,
+				84DD83D12D43374A00C614D0 /* EventExample.swift in Sources */,
 				846B484B2D420F1C001ADB1A /* AppRoute.swift in Sources */,
+				84DD83D52D433F8300C614D0 /* RouteCallbacks.swift in Sources */,
 				846B48452D41F822001ADB1A /* URL+extension.swift in Sources */,
 				846B484F2D420FAE001ADB1A /* Views.swift in Sources */,
+				84DD83CB2D4336DA00C614D0 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

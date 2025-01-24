@@ -31,7 +31,9 @@ struct DetailView: View {
                 .cornerRadius(8)
                 
                 Button("去设置页") {
-                    router.push(.sub(.settings))
+                    router.push(.sub(.settings)) { data in
+                        print("传递的数据: \(String(describing: data))")
+                    }
                 }
                 .padding()
                 .frame(width: 120)
@@ -57,7 +59,10 @@ struct SettingsView: View {
     var body: some View {
         
         Button("返回上一页") {
-            router.pop()
+//            router.pop()
+            
+            let json = ["name": "张三", "age": 18] as [String : Any]
+            router.pop(json)
         }
         .padding()
         .frame(width: 120)
