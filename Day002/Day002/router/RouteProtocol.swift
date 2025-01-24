@@ -35,24 +35,3 @@ protocol RouterProtocol: ObservableObject {
     func destinationView(for route: RouteType) -> AnyView
     
 }
-
-
-extension RouterProtocol {
-    func popToRoot() {
-        navigationPath.removeAll()
-    }
-    
-    func popTo(_ route: RouteType) {
-        if let index = navigationPath.firstIndex(of: route) {
-            let end = navigationPath.index(after: index)
-            if end <= navigationPath.count {
-                navigationPath = Array(navigationPath.prefix(end))
-            }
-        }
-    }
-    
-    func replaceCurrent(with route: RouteType) {
-        _ = navigationPath.popLast()
-        navigationPath.append(route)
-    }
-}

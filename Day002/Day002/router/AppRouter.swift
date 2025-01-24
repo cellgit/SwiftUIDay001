@@ -36,21 +36,45 @@ class AppRouter: RouterProtocol {
     @Published var navigationPath: [AppRoute] = []
     @Published var presentedRoute: AppRoute? = nil
     
-    // 基础导航操作
+    // 导航到下一页
     func push(_ route: AppRoute) {
         navigationPath.append(route)
     }
     
+    /// 返回上一页
     func pop() {
         _ = navigationPath.popLast()
     }
     
+    /// 模态弹出
     func present(_ route: AppRoute) {
         presentedRoute = route
     }
     
+    /// 关闭模态
     func dismiss() {
         presentedRoute = nil
+    }
+    
+    /// 返回到根视图
+    func popToRoot() {
+        navigationPath.removeAll()
+    }
+    
+    /// 返回到指定路由
+    func popTo(_ route: RouteType) {
+        if let index = navigationPath.firstIndex(of: route) {
+            let end = navigationPath.index(after: index)
+            if end <= navigationPath.count {
+                navigationPath = Array(navigationPath.prefix(end))
+            }
+        }
+    }
+    
+    /// 替换当前路由
+    func replaceCurrent(with route: RouteType) {
+        _ = navigationPath.popLast()
+        navigationPath.append(route)
     }
     
     // 深链处理

@@ -48,7 +48,7 @@ struct Day002App: App {
                 NavigationSplitView {
                     // 左侧的导航区域
                     List {
-                        NavigationLink(destination: ContentView()
+                        NavigationLink(destination: HomeView()
                                         .environmentObject(router)) {
                             Text("个人资料")
                         }
@@ -66,11 +66,10 @@ struct Day002App: App {
                 }
             }
             else {
-                
                 // 右侧的内容区域，包含 TabView
                 TabView {
                     // Tab 1: 个人资料视图
-                    ContentView()
+                    HomeView()
                         .tabItem {
                             Label("主页", systemImage: "person.circle")
                         }
